@@ -19,6 +19,10 @@ Plug 'scrooloose/nerdtree'
 " The best git wrapper ever
 Plug 'tpope/vim-fugitive'
 
+" Replace with a value in the register
+Plug 'ReplaceWithRegister'
+
+
 " Better line numbers
 Plug 'myusuf3/numbers.vim'
 
@@ -66,6 +70,17 @@ Plug 'sickill/vim-pasta'
 
 " Using ctags to navigate functions/classes etc. quickly
 Plug 'majutsushi/tagbar'
+
+" Added repeating to plugin maps
+Plug 'tpope/vim-repeat'
+
+" Custom Text Objects
+Plug 'kana/vim-textobj-user'
+Plug 'wellle/targets.vim'
+Plug 'glts/vim-textobj-comment'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-indent'
+Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 
