@@ -88,4 +88,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Compatibility option for getting Syntastic and YCM to work together on C
+" files
+let g:ycm_show_diagnostics_ui = 0
+
 autocmd BufReadPre,FileReadPre * :DetectIndent
