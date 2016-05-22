@@ -64,6 +64,9 @@ Plug 'kien/rainbow_parentheses.vim'
 " Better indented pasting
 Plug 'sickill/vim-pasta'
 
+" Using ctags to navigate functions/classes etc. quickly
+Plug 'majutsushi/tagbar'
+
 call plug#end()
 
 let g:airline_powerline_fonts = 1
