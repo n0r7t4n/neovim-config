@@ -98,4 +98,6 @@ let g:ycm_show_diagnostics_ui = 0
 set shiftwidth=4
 set tabstop=4
 
+set number
+
 autocmd BufReadPre,FileReadPre * :DetectIndent
