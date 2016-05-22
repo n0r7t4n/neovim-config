@@ -1,6 +1,9 @@
 " My plugins start here
 call plug#begin('~/.vim/plugged')
 
+" Tabs to spaces and back again
+Plug 'rhlobo/vim-super-retab'
+
 " vim-airline, the lean mean statusline
 Plug 'bling/vim-airline'
 
