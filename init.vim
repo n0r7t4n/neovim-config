@@ -121,3 +121,5 @@ set expandtab
 set number
 
 imap jk <Esc>`^
+
+autocmd BufWinEnter * :DetectIndent
