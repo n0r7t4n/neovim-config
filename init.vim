@@ -120,4 +120,4 @@ set expandtab
 
 set number
 
-autocmd BufReadPre,FileReadPre * :DetectIndent
+imap jk <Esc>`^
