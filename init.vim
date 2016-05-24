@@ -100,8 +100,6 @@ let g:airline_powerline_fonts = 1
 
 " Set the seperators (default colored arrows in air-line) to blank
 " Removes the annoying misaligned arrows
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 
 " Sets motion leader as <Leader> instead of <Leader><Leader>
 map <Leader> <Plug>(easymotion-prefix)
