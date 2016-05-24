@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 " Tabs to spaces and back again
 Plug 'rhlobo/vim-super-retab'
+" Some good mappings
+Plug 'tpope/vim-unimpaired'
 
 " vim-airline, the lean mean statusline
 Plug 'bling/vim-airline'
