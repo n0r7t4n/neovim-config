@@ -134,7 +134,6 @@ set number
 
 imap jk <Esc>`^
 
-autocmd BufWinEnter * :DetectIndent
 " This remaps arrow keys to switch between windows
 nmap <silent> <Up> :wincmd k<CR>
 nmap <silent> <Down> :wincmd j<CR>
