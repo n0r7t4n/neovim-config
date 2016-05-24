@@ -107,7 +107,6 @@ let g:airline_right_sep=''
 map <Leader> <Plug>(easymotion-prefix)
 map <Space> <Leader>
 
-colorscheme monokai
 colorscheme molokai
 set background=light
 
