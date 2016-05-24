@@ -87,6 +87,13 @@ Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 
+
+" YouCompleteMe
+let g:ycm_key_list_previous_completion=['<Up>']
+
+"" Ultisnips
+let g:UltiSnipsExpandTrigger="<c-tab>"
+
 let g:airline_powerline_fonts = 1
 
 " Set the seperators (default colored arrows in air-line) to blank
