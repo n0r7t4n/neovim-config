@@ -107,6 +107,8 @@ let g:airline_right_sep=''
 map <Leader> <Plug>(easymotion-prefix)
 
 colorscheme monokai
+colorscheme molokai
+set background=light
 
 " Syntastic settings
 set statusline+=%#warningmsg#
