@@ -105,6 +105,7 @@ let g:airline_right_sep=''
 
 " Sets motion leader as <Leader> instead of <Leader><Leader>
 map <Leader> <Plug>(easymotion-prefix)
+map <Space> <Leader>
 
 colorscheme monokai
 colorscheme molokai
