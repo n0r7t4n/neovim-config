@@ -81,7 +81,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 " Sets motion leader as <Leader> instead of <Leader><Leader>
 map <Leader> <Plug>(easymotion-prefix)
 map <Space> <Leader>
-map f <Plug>(easymotion-bd-e)
+map f <Plug>(easymotion-bd-w)
 let g:EasyMotion_use_upper = 1
 let g:EasyMotion_keys='SADFJKLEWCMPGH'
 let g:EasyMotion_smartcase = 1
@@ -92,13 +92,16 @@ set background=dark
 syntax on
   let g:oceanic_next_terminal_bold = 1
   let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+colorscheme molokai
 
 set tabstop=4
 set shiftwidth=4
 
 set relativenumber
 set number
+
+set mouse=a
+set clipboard=unnamedplus
 
 nmap , <C-w><
 nmap . <C-w>>
@@ -113,6 +116,18 @@ noremap k gk
 noremap j gj
 noremap 0 g0
 noremap $ g$
+
+" Copy to clipboard
+vnoremap y "+y
+nnoremap Y "+yg_
+nnoremap y "+y
+nnoremap yy "+yy
+
+" Paste from clipboard
+nnoremap P "+p
+nnoremap p "+P
+vnoremap P "+p
+vnoremap p "+P
 
 " This remaps arrow keys to switch between windows
 nmap <silent> <Up> :wincmd k<CR>
