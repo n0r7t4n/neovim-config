@@ -143,3 +143,5 @@ au BufWinEnter * :DetectIndent
 let g:airline_powerline_fonts = 1
 let g:airline_theme="behelit"
 let g:deoplete#enable_at_startup = 1
+
+set incsearch
