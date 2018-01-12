@@ -103,8 +103,8 @@ set number
 set mouse=a
 set clipboard=unnamedplus
 
-nmap , <C-w><
-nmap . <C-w>>
+nmap < <C-w><
+nmap > <C-w>>
 nmap - <C-w>-
 nmap + <C-w>+
 nmap = <C-w>=
