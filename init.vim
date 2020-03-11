@@ -17,6 +17,7 @@ Plug 'dense-analysis/ale'
 
 " Intellisense for vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Nash0x7E2/awesome-flutter-snippets'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
@@ -134,9 +135,10 @@ let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {'python': ['flake8'], 'cpp':['ccls', 'clang']}
 let g:ale_python_flake8_options = '--ignore=E1,E23,W503'
-let g:ale_fixers = {'python': ['yapf', 'black', 'add_blank_lines_for_python_control_statements', 'isort'], 'cpp':['clangtidy'], 'c':['clangtidy'], 'json':['prettier'], 'markdown':['prettier']}
+let g:ale_fixers = {'python': ['yapf', 'black', 'add_blank_lines_for_python_control_statements', 'isort'], 'cpp':['clangtidy'], 'c':['clangtidy'], 'javascript':['fixjson'], 'markdown':['prettier']}
 let g:ale_python_pylint_options = '--rcfile /home/utkarsh/.pylintrc'
 let g:ale_fix_on_save = 1
+let g:airline#extensions#ale#enabled = 1
 " }}}
 
 " Formatting {{{
@@ -489,7 +491,6 @@ let g:coc_global_extensions = [
       \'coc-docker',
       \'coc-clangd',
       \'coc-cmake',
-      \'github.com/Nash0x7E2/awesome-flutter-snippets'
 \]
 
 " Tab completion for coc-snippets like VSCode
