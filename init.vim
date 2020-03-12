@@ -190,7 +190,7 @@ autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "norma
 autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
 nnoremap <Space>f :Files<CR>
-nnoremap <Silent> <Leader>v :Vista!!<CR>
+nnoremap <Space>v :Vista!!<CR>
 " }}}
 
 " Navigation {{{
@@ -316,10 +316,12 @@ let g:vim_markdown_conceal_code_blocks = 0
 " }}}
 
 " Flutter specifics {{{
-nnoremap <leader>fr :FlutterRun<CR>
-nnoremap <leader>fq :FlutterQuit<CR>
-nnoremap <leader>fh :FlutterHotReload<CR>
-nnoremap <leader>fR :FlutterHotRestart<CR>
+nnoremap <leader>fe :CocCommand flutter.emulators<CR>
+nnoremap <leader>fr :CocCommand flutter.run<CR>
+nnoremap <leader>fq :CocCommand flutter.dev.quit<CR>
+nnoremap <leader>fh :CocCommand flutter.dev.hotReload<CR>
+nnoremap <leader>fR :CocCommand flutter.dev.hotRestart<CR>
+nnoremap <leader>fo :CocCommand flutter.dev.openDevLog<CR>
 let g:dart_style_guide = 2
 let g:dart_format_on_save = 1
 let g:lsc_auto_map = v:true
@@ -491,6 +493,7 @@ let g:coc_global_extensions = [
       \'coc-docker',
       \'coc-clangd',
       \'coc-cmake',
+      \'coc-yaml',
 \]
 
 " Tab completion for coc-snippets like VSCode

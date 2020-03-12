@@ -13,7 +13,6 @@
   "suggest.detailField": "preview",
   "suggest.removeDuplicateItems": true,
   "suggest.snippetIndicator": " \ue796",
-  "git.addGBlameToVirtualText": true,
   "suggest.asciiCharactersOnly": true,
   "coc.source.dictionary.filetypes": ["markdown", "text", "help", "gitcommit", "snippets"],
   "coc.source.word.filetypes": ["markdown", "text", "help", "gitcommit", "snippets"],
