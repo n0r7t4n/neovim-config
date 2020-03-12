@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 " I need that color
 Plug 'flazz/vim-colorschemes'
 Plug 'skielbasa/vim-material-monokai'
-Plug 'chrisbra/Colorizer'
 
 " vim-airline, the lean mean statusline
 Plug 'vim-airline/vim-airline'
@@ -471,6 +470,10 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" For highlighting
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" All plugins
 let g:coc_global_extensions = [
       \'coc-word',
       \'coc-syntax',

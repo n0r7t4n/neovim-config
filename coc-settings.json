@@ -20,7 +20,7 @@
   "coc.source.emoji.filetypes": ["markdown", "text"],
   "coc.preferences.colorSupport": true,
   "highlight.document.enable": true,
-  "highlight.colors.enable": false,
+  "highlight.colors.enable": true,
   "highlight.disableLanguages": [],
   "cSpell.language": "en-GB",
   "suggest.completionItemKindLabels": {
