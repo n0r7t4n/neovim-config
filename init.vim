@@ -151,20 +151,22 @@ set expandtab
 " NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+" Opens NERDTree when by default when vim opens with no file
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | wincmd p | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" Closes vim when NERDTree is the only remaining window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeWinSize=25
 
+let g:NERDTreeWinSize=25
 let g:NERDTreeSyntaxDisableDefaultExtensions = 1
 let g:NERDTreeDisableExactMatchHighlight = 1
 let g:NERDTreeDisablePatternMatchHighlight = 1
 let g:NERDTreeSyntaxEnabledExtensions = ['c', 'cpp', 'dart', 'java', 'jpg', 'json', 'md', 'mp4', 'png', 'py', 'yaml']
 let g:NERDTreeHighlightCursorline = 0
 
-nnoremap <C-f> :NERDTreeToggle<CR>
+nnoremap <silent> <C-f> :NERDTreeToggle<CR>
 
 " Vista
 function! NearestMethodOrFunction() abort
@@ -189,7 +191,7 @@ autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "norma
 autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
 nnoremap <Space>f :Files<CR>
-nnoremap <Space>v :Vista!!<CR>
+nnoremap <silent> <Space>v :Vista!!<CR>
 " }}}
 
 " Navigation {{{
@@ -202,19 +204,19 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_smartsign_us = 1
 
 " Window tab thingies
-nnoremap <C-t> :tabnew<CR>
-nnoremap <C-x> :tabclose<CR>
+nnoremap <silent> <C-t> :tabnew <bar> :NERDTreeMirror <bar> wincmd p <CR>
+nnoremap <silent> <C-x> :tabclose<CR>
 
 " Makes sense I guess
 nnoremap H ^
 nnoremap L $
 nnoremap ; :
 
-nmap < <C-w><
-nmap > <C-w>>
-nmap - <C-w>-
-nmap + <C-w>+
-nmap = <C-w>=
+nmap <silent> < <C-w><
+nmap <silent> > <C-w>>
+nmap <silent> - <C-w>-
+nmap <silent> + <C-w>+
+nmap <silent> = <C-w>=
 
 " This remaps arrow keys to switch between windows
 nmap <silent> <Up> :wincmd k<CR>
@@ -321,6 +323,7 @@ nnoremap <leader>fq :CocCommand flutter.dev.quit<CR>
 nnoremap <leader>fh :CocCommand flutter.dev.hotReload<CR>
 nnoremap <leader>fR :CocCommand flutter.dev.hotRestart<CR>
 nnoremap <leader>fo :CocCommand flutter.dev.openDevLog<CR>
+nnoremap <leader>fg :CocCommand flutter.pub.get<CR>
 let g:dart_style_guide = 2
 let g:dart_format_on_save = 1
 let g:lsc_auto_map = v:true
