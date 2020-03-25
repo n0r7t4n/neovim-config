@@ -190,7 +190,6 @@ autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "norma
 " you can add the following line to your vimrc
 autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
-nnoremap <Space>f :Files<CR>
 nnoremap <silent> <Space>v :Vista!!<CR>
 " }}}
 
@@ -244,6 +243,7 @@ let g:comfortable_motion_no_default_key_mappings = 1
 let g:comfortable_motion_impulse_multiplier = 1  " Feel free to increase/decrease this value.
 nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 3)<CR>
 nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -3)<CR>
+nnoremap <Space>f :Files<CR>
 " }}}
 
 " Miscellaneous {{{
@@ -273,10 +273,10 @@ nnoremap y "+y
 nnoremap yy "+yy
 
 " Paste from clipboard
-nnoremap P "+p
-nnoremap p "+P
-vnoremap P "+p
-vnoremap p "+P
+nnoremap P "+P
+nnoremap p "+p
+vnoremap P "+P
+vnoremap p "+p
 
 tnoremap <Esc> <C-\><C-n>
 
